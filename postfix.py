@@ -194,7 +194,7 @@ while len(tokens) != 0:
     else:
         cmd[tok]()
     if (args.v):
-        print('stack:', stack)
+        print(' '.join(tokens), '|', ' '.join([str(stack[len(stack)-x-1]) for x in range(len(stack))]))
 
 print(stack[-1])
 
